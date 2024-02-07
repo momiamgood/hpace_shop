@@ -13,10 +13,11 @@ return new class extends Migration {
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
             $table->string('title', 150);
-            $table->text('desc');
-            $table->string('cover');
-            $table->double('price');
+            $table->text('desc')->nullable();
+            $table->string('cover')->nullable();
+            $table->double('price')->nullable();
             $table->foreignId('category_id')
+                ->nullable()
                 ->constrained()
                 ->cascadeOnDelete();
             $table->timestamps();
