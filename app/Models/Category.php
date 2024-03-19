@@ -14,9 +14,9 @@ class Category extends Model
     protected $guarded = [];
     public $timestamps = false;
 
-    public function subcategory()
+    public function products(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
-        return $this->hasMany(Category::class, 'id', 'parent_id');
+        return $this->belongsTo('id', 'category_id', 'projects');
     }
 
 }

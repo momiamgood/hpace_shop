@@ -1,0 +1,28 @@
+body {
+    background-color: var(--blue-medium);
+    font-family: "Montserrat";
+    color: var(--font-color-main);
+  
+}
+
+h1 {
+    font-size: 6em;
+    margin: 0;
+}
+
+h2 {
+    font-size: 2.6em;
+    margin-bottom:20px;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+
+main {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+

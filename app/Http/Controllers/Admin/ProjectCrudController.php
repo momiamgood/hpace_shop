@@ -46,6 +46,13 @@ class ProjectCrudController extends CrudController
          * Columns can be defined using the fluent syntax:
          * - CRUD::column('price')->type('number');
          */
+
+        $this->crud->setColumns(['title', 'desc', 'price', 'category', 'files', [
+            'label' => 'Обложка',
+            'type' => 'image',
+            'name'=> 'cover'
+        ]]);
+
     }
 
     /**
@@ -68,7 +75,8 @@ class ProjectCrudController extends CrudController
             'name' => 'cover',
             'label' => 'Обложка',
             'type' => 'upload',
-            'withFiles' => 1
+            'upload' => true,
+            'withMedia' => true
         ]);
         CRUD::field('price')->type('number')->label('Цена')
             ->prefix('Р')
@@ -83,10 +91,11 @@ class ProjectCrudController extends CrudController
             'attribute' => 'title'
         ]);
         $this->crud->field([
-            'name' => 'file.path',
+            'name' => 'files',
             'label' => 'Файлы проекта',
             'type' => 'upload',
-            'withFiles' => 1
+            'upload' => true,
+            'withFiles' => true
         ]);
     }
 

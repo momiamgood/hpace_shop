@@ -71,13 +71,6 @@ class CategoryCrudController extends CrudController
             'name' => 'title',
             'label' => 'Заголовок',
         ]);
-        $this->crud->field([
-            'name' => 'parent_id',
-            'label' => 'Род.категория',
-            'type' => 'select',
-            'model' => Category::class,
-            'attribute' => 'title'
-        ]);
     }
 
     /**

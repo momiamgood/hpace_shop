@@ -12,11 +12,4 @@ class Project extends Model
     use HasFactory;
 
     protected $guarded = [];
-
-
-    public function file(): \Illuminate\Database\Eloquent\Relations\BelongsTo
-    {
-        return $this->belongsTo(File::class);
-    }
-
 }

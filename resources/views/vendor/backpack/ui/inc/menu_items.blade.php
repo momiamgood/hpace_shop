@@ -3,3 +3,6 @@
 
 <x-backpack::menu-item title="Categories" icon="las la-tag" :link="backpack_url('category')" />
 <x-backpack::menu-item title="Projects" icon="las la-archive" :link="backpack_url('project')" />
+
+<x-backpack::menu-item title="Orders" icon="la la-question" :link="backpack_url('order')" />
+<x-backpack::menu-item title="Reviews" icon="la la-question" :link="backpack_url('review')" />
